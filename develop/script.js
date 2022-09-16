@@ -1,4 +1,3 @@
-// Defining variables
 var ConfirmUpperCase;
 var ConfirmLowerCase;
 var ConfirmNumbers;
@@ -15,7 +14,7 @@ generatePassword = function() {
         alert('Please enter a number between 8 and 128');
         window.prompt = parseInt(prompt('How long would you like your passowrd to be? Enter a value between 8 and 128.'));
     }
-    if (window.confirm) {
+    if (window.prompt) {
         ConfirmUpperCase = confirm('Do you want to include uppercase letters?');
         ConfirmLowerCase = confirm('Do you want to include lowercase letters?');
         ConfirmNumbers = confirm('Do you want to include numbers?');
@@ -70,7 +69,12 @@ generatePassword = function() {
         userSelection = specialCharacters;
     }
 
-
+    var newPassword = [];
+    for (var i = 0; i < window.prompt; i++) {
+        var confirmedSelections = userSelection[Math.floor(Math.random() * userSelection.length)];
+        newPassword.push(confirmedSelections);
+    }
+   return (newPassword.join(''));
 }
 
 
@@ -83,7 +87,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
