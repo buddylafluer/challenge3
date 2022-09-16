@@ -9,6 +9,21 @@ let lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "
 let specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", "[", "]", "=", "?", ">", "<", "/"];
 let numbers = ["1","2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
+generatePassword = function() {
+    generatePopup = parseInt(prompt('How long would you like your password to be? Enter a value between 8 and 128.'));
+    while (!generatePopup || generatePopup < 8 || generatePopup > 128) {
+        alert('Please enter a number between 8 and 128');
+        generatePopup = parseInt(prompt('How long would you like your passowrd to be? Enter a value between 8 and 128.'));
+    }
+    if (generatePopup) {
+        ConfirmUpperCase = confirm('Do you want uppercase letters?');
+        ConfirmLowerCase = confirm('Do you want lowercase letters?');
+        ConfirmNumbers = confirm('Do you want numbers?');
+        ConfirmSpecialCharacters = confirm('Do you want special characters?');
+    }
+    
+}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
