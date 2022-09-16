@@ -16,12 +16,11 @@ generatePassword = function() {
         generatePopup = parseInt(prompt('How long would you like your passowrd to be? Enter a value between 8 and 128.'));
     }
     if (generatePopup) {
-        ConfirmUpperCase = confirm('Do you want uppercase letters?');
-        ConfirmLowerCase = confirm('Do you want lowercase letters?');
-        ConfirmNumbers = confirm('Do you want numbers?');
-        ConfirmSpecialCharacters = confirm('Do you want special characters?');
+        ConfirmUpperCase = confirm('Do you want to include uppercase letters?');
+        ConfirmLowerCase = confirm('Do you want to include lowercase letters?');
+        ConfirmNumbers = confirm('Do you want to include numbers?');
+        ConfirmSpecialCharacters = confirm('Do you want to include special characters?');
     }
-    
 }
 
 
